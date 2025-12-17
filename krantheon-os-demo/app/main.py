@@ -7,6 +7,14 @@ from enum import Enum
 from typing import Dict, List, Optional
 
 from fastapi import FastAPI
+from fastapi import FastAPI
+
+app = FastAPI(title="Krantheon OS Demo API v1.0")
+
+@app.get("/")
+async def root():
+    return {"status": "ok", "message": "Krantheon OS Demo API running."}
+
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
